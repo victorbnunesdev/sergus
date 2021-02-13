@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sergusapp/app/views/sobre_view.dart';
-import 'package:sergusapp/app/views/start_view.dart';
+import 'package:sergusapp/app/views/welcome_view.dart';
+import 'package:sergusapp/constants.dart';
 
 import 'app_controller.dart';
 import 'home_page.dart';
@@ -13,11 +14,14 @@ class AppWidget extends StatelessWidget {
         animation: AppController.instance,
         builder: (context, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
-                primarySwatch: Colors.green, brightness: Brightness.light),
+                primaryColor: kPrimaryColor,
+                scaffoldBackgroundColor: Colors.white,
+                brightness: Brightness.light),
             initialRoute: '/',
             routes: {
-              '/': (context) => LoginPage(),
+              '/': (context) => WelcomeView(),
               '/home': (context) => HomePage(),
               '/sobre': (context) => SobreView()
             },

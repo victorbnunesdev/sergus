@@ -21,59 +21,23 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Row(
               children: [
-                Expanded(
-                  child: ButtonTheme(
-                    height: 60,
-                    buttonColor: Colors.green,
-                    textTheme: ButtonTextTheme
-                        .primary, //  <-- this auto selects the right color
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushReplacementNamed('/sobre');
-                      },
-                      child: Text(
-                        "ENTRAR",
-                        style: new TextStyle(
-                          fontSize: 15.0,
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: ButtonTheme(
+                ButtonTheme(
                     height: 60,
                     buttonColor: Colors.green,
                     textTheme: ButtonTextTheme.primary,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushReplacementNamed('/sobre');
-                      },
-                      child: Text(
-                        "CRIAR MEU ACESSO",
-                        style: new TextStyle(
-                          fontSize: 15.0,
-                          color: Colors.white,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(29),
+                      child: FlatButton(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                        color: Colors.green,
+                        onPressed: () {},
+                        child: Text(
+                          "LOGIN",
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
-                    ),
-                  ),
-                ),
+                    )),
               ],
             ),
             SizedBox(
@@ -81,28 +45,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Row(
               children: [
-                Expanded(
-                  child: ButtonTheme(
+                ButtonTheme(
                     height: 60,
-                    buttonColor: Colors.green,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushReplacementNamed('/sobre');
-                      },
-                      child: Text(
-                        "AINDA NÃO SOU PARTICIPANTE",
-                        style: new TextStyle(
-                          fontSize: 15.0,
-                          color: Colors.white,
+                    buttonColor: Colors.green[200],
+                    textTheme: ButtonTextTheme.primary,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(29),
+                      child: FlatButton(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                        color: Colors.green,
+                        onPressed: () {},
+                        child: Text(
+                          "NÃO ASSOCIADO",
+                          style: TextStyle(color: Colors.white),
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ),
-                ),
+                    )),
               ],
             ),
           ],
