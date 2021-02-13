@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sergusapp/app/components/default_button.dart';
 import 'package:sergusapp/constants.dart';
 
 class Body extends StatelessWidget {
@@ -28,12 +29,21 @@ class Body extends StatelessWidget {
               Container(
                   height: size.height * 0.66,
                   width: size.width,
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset(
-                      "assets/images/main_logo.png",
-                    ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SafeArea(
+                        child: AnimatedContainer(
+                          padding: EdgeInsets.only(top: size.height * 0.1),
+                          duration: Duration(seconds: 2),
+                          child: Image.asset(
+                            "assets/images/main_logo.png",
+                            height: size.height * 0.25,
+                          ),
+                        ),
+                      )
+                    ],
                   )),
               Container(
                 height: size.height * 0.24,
@@ -49,12 +59,20 @@ class Body extends StatelessWidget {
                     Container(
                       width: size.width * 0.8,
                       child: OutlineButton(
+                        borderSide: BorderSide(
+                            style: BorderStyle.solid,
+                            color: kPrimaryColor,
+                            width: 3),
                         padding:
                             EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                         onPressed: () {},
                         color: kPrimaryColor,
                         textColor: Colors.green,
-                        child: Text("Quero conhcer a Sergus"),
+                        child: Text(
+                          "Quero conhcer a Sergus",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
                       ),
                     ),
                   ],
@@ -69,7 +87,7 @@ class Body extends StatelessWidget {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.access_alarms, size: 18),
+                            Icon(Icons.local_phone, size: 20),
                             Text("(79) 2106 - 4500"),
                           ]),
                       SizedBox(height: 5),
@@ -82,38 +100,6 @@ class Body extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class RoundedButton extends StatelessWidget {
-  final String text;
-  final Function press;
-  final Color color, textColor;
-  const RoundedButton(
-      {Key key,
-      this.text,
-      this.press,
-      this.color = kPrimaryColor,
-      this.textColor = Colors.white})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      width: size.width * 0.8,
-      child: ClipRRect(
-        child: FlatButton(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          color: kPrimaryColor,
-          onPressed: press,
-          child: Text(
-            text,
-            style: TextStyle(color: textColor),
-          ),
-        ),
       ),
     );
   }
