@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sergusapp/app/components/empty_button.dart';
+import 'package:sergusapp/app/controllers/app_controller.dart';
 
 import '../default_button.dart';
 
@@ -13,7 +14,9 @@ class BodyMain extends StatelessWidget {
         children: [
           RoundedButton(
             text: "Entrar",
-            press: () {},
+            press: () {
+              AppController.instance.changeTheme();
+            },
           ),
           EmptyButton(
             text: "Quero conhecer a Sergus",

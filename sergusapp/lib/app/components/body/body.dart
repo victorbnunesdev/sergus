@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sergusapp/app/components/body/body_top.dart';
+import 'package:sergusapp/app/controllers/app_controller.dart';
 import 'package:sergusapp/app/views/login_view.dart';
 
 import 'body_bottom.dart';
@@ -30,7 +31,8 @@ class _BodyState extends State<Body> {
             child: AnimatedContainer(
               duration: Duration(seconds: 40),
               curve: Curves.easeInToLinear,
-              child: isLoginPage ? LoginView() : BodyMain(),
+              child:
+                  AppController.instance.isDarkTheme ? LoginView() : BodyMain(),
             )),
         Expanded(
           flex: 1,
