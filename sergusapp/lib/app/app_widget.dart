@@ -24,7 +24,7 @@ class AppWidget extends StatelessWidget {
               '/': (context) => WelcomeView(),
               '/home': (context) => HomePage(),
               '/sobre': (context) => SobreView(),
-              '/about': (context) => AboutView(),
+              '/about': (context) => AboutView(section: Section.init),
             },
           );
         });
