@@ -12,18 +12,55 @@ class LatestNewsSection extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
-        SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            text,
-            textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 15),
-          ),
+        Divider(
+          thickness: 2,
         ),
+        SizedBox(height: 10),
+        carregarNoticias(),
       ],
     );
   }
 }
 
-final String text = "Em construção\n\n";
+carregarNoticias() {
+  return Column(
+    children: [
+      Container(
+        padding: const EdgeInsets.all(8.0),
+        height: 150,
+        width: double.maxFinite,
+        child: Card(
+          elevation: 5,
+          child: Text('Notícia 1'),
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8.0),
+        height: 150,
+        width: double.maxFinite,
+        child: Card(
+          elevation: 5,
+          child: Text('Notícia 2'),
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8.0),
+        height: 150,
+        width: double.maxFinite,
+        child: Card(
+          elevation: 5,
+          child: Text('Notícia 3'),
+        ),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8.0),
+        height: 150,
+        width: double.maxFinite,
+        child: Card(
+          elevation: 5,
+          child: Text('Notícia 4'),
+        ),
+      ),
+    ],
+  );
+}

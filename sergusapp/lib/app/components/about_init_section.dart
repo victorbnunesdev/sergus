@@ -12,6 +12,9 @@ class AboutInitSection extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
+        Divider(
+          thickness: 2,
+        ),
         SizedBox(height: 10),
         Padding(
           padding: const EdgeInsets.all(8.0),

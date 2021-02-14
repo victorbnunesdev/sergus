@@ -27,7 +27,9 @@ class AboutView extends StatelessWidget {
           ),
         ],
       ),
-      body: preencherSessaoInterna(section),
+      body: SingleChildScrollView(
+        child: preencherSessaoInterna(section),
+      ),
       floatingActionButton: AboutButtons(),
     );
   }
