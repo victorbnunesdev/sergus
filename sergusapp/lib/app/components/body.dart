@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sergusapp/app/components/default_button.dart';
 import 'package:sergusapp/constants.dart';
 
+import 'empty_button.dart';
+
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -56,39 +58,19 @@ class Body extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Container(
-            child: Container(
-              height: size.height * 0.24,
-              width: size.width,
-              padding: EdgeInsets.all(20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  RoundedButton(
-                    text: "Entrar",
-                    press: () {},
-                  ),
-                  Container(
-                    width: size.width * 0.8,
-                    height: size.height * 0.05,
-                    child: OutlineButton(
-                      borderSide: BorderSide(
-                          style: BorderStyle.solid,
-                          color: kPrimaryColor,
-                          width: 3),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                      onPressed: () {},
-                      color: kPrimaryColor,
-                      textColor: Colors.green,
-                      child: Text(
-                        "Quero conhcer a Sergus",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            padding: EdgeInsets.all(10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RoundedButton(
+                  text: "Entrar",
+                  press: () {},
+                ),
+                EmptyButton(
+                  text: "Quero conhecer a Sergus",
+                  press: () {},
+                ),
+              ],
             ),
           ),
         ),
@@ -105,11 +87,18 @@ class Body extends StatelessWidget {
                     Icon(Icons.local_phone, size: 20),
                     Text("(79) 2106 - 4500"),
                   ]),
-                  SizedBox(height: 5),
-                  Text(
-                    "Av. Augusto Maynard, 321, 1º andar São José, 49015-380 - Aracaju/SE",
-                    textAlign: TextAlign.center,
-                  ),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Text(
+                      "Av. Augusto Maynard, 321, 1º andar",
+                      textAlign: TextAlign.center,
+                    ),
+                  ]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Text(
+                      "São José, 49015-380 - Aracaju/SE",
+                      textAlign: TextAlign.center,
+                    ),
+                  ])
                 ],
               ),
             ),
