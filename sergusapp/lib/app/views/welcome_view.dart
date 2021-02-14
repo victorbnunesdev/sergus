@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sergusapp/app/components/body.dart';
+import 'package:sergusapp/app/components/body/body.dart';
 
 class WelcomeView extends StatelessWidget {
   @override

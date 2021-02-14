@@ -3,7 +3,7 @@ import 'package:sergusapp/app/views/sobre_view.dart';
 import 'package:sergusapp/app/views/welcome_view.dart';
 import 'package:sergusapp/constants.dart';
 
-import 'app_controller.dart';
+import 'controllers/app_controller.dart';
 import 'home_page.dart';
 import 'views/about_view.dart';
 
