@@ -6,19 +6,24 @@ class LatestNewsSection extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: 15),
-        Text('ÚLTIMAS NOTÍCIAS'),
+        Center(
+          child: Text(
+            'ÚLTIMAS NOTÍCIAS',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+        ),
         SizedBox(height: 10),
-        Text('Bem-vindo ao aplicativo do Portal do Participante!'),
-        SizedBox(height: 10),
-        Text(
-            'O Sergus se resguarda no direito de gravar seu IP, tipo de navegador, aparelho e operadora de celular, posição geográfica e outros dados relativos aos acessos solicitados.'),
-        SizedBox(height: 10),
-        Text(
-            'Não será divulgado publicamente nem a terceiros suas informações de modo que possam identificá-lo, mas pode fazê-lo de forma agregada no intuito de realizar análises, estudos, melhoria do sistema e por força de ordem judicial.'),
-        SizedBox(height: 10),
-        Text(
-            'O Sergus está fortemente comprometido em manter a sua privacidade quando estiver visitando o nosso aplicativo. Algumas das informações mantidas no nosso servidor são informações que o participante possui em nossas bases de cadastro e quando o mesmo nos fornece através de formulários, enquanto que algumas são obtidas automaticamente.'),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            text,
+            textAlign: TextAlign.justify,
+            style: TextStyle(fontSize: 15),
+          ),
+        ),
       ],
     );
   }
 }
+
+final String text = "Em construção\n\n";

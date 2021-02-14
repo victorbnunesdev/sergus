@@ -7,15 +7,25 @@ class AboutInitSection extends StatelessWidget {
       children: [
         SizedBox(height: 15),
         Center(
-          child: Text('Seja bem vindo ao APP Sergus'),
+          child: Text(
+            'BEM VINDO',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
         ),
         SizedBox(height: 10),
-        Center(
+        Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Text(
-              'Aqui você poderá ver suas informações previdenciárias, como também aprender sobre o Novo Plano CD e fazer sua Pré-Adesão, Educação Previdenciária e Financeira.',
-              textAlign: TextAlign.center),
+            text,
+            textAlign: TextAlign.justify,
+            style: TextStyle(fontSize: 15),
+          ),
         ),
       ],
     );
   }
 }
+
+final String text = "Aqui você poderá ver suas informações previdenciárias, "
+    "como também aprender sobre o Novo Plano CD e fazer sua Pré-Adesão, Educação"
+    " Previdenciária e Financeira.";
