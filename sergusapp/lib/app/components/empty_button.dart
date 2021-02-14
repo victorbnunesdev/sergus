@@ -30,7 +30,7 @@ class EmptyButton extends StatelessWidget {
         //     style: BorderStyle.solid, color: kPrimaryColor, width: 3),
         // color: kPrimaryColor,
         // textColor: Colors.green,
-        onPressed: () {},
+        onPressed: this.press,
         child: Text(
           this.text,
           style: TextStyle(

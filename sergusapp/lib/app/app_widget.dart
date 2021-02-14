@@ -5,7 +5,7 @@ import 'package:sergusapp/constants.dart';
 
 import 'app_controller.dart';
 import 'home_page.dart';
-import 'login_page.dart';
+import 'views/about_view.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -23,7 +23,8 @@ class AppWidget extends StatelessWidget {
             routes: {
               '/': (context) => WelcomeView(),
               '/home': (context) => HomePage(),
-              '/sobre': (context) => SobreView()
+              '/sobre': (context) => SobreView(),
+              '/about': (context) => AboutView(),
             },
           );
         });

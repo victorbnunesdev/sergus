@@ -17,7 +17,9 @@ class BodyMain extends StatelessWidget {
           ),
           EmptyButton(
             text: "Quero conhecer a Sergus",
-            press: () {},
+            press: () {
+              Navigator.of(context).pushReplacementNamed('/about');
+            },
           ),
         ],
       ),
