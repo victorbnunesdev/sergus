@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class UltimasNoticiasPartialView extends StatelessWidget {
+  final controller;
+
+  const UltimasNoticiasPartialView({Key key, this.controller})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(

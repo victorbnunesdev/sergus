@@ -22,8 +22,7 @@ class AppWidget extends StatelessWidget {
             routes: {
               '/': (context) => WelcomeView(),
               '/home': (context) => HomePage(),
-              '/sobre': (context) =>
-                  SobreView(sobrePartialViews: SobrePartialViews.inicio),
+              '/sobre': (context) => SobreView(),
             },
           );
         });
