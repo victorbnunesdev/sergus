@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PrivacyPolicySection extends StatelessWidget {
+class PoliticaPrivacidadePartialView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
