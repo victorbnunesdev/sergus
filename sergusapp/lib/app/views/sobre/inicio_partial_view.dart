@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SergusEducationSection extends StatelessWidget {
+class InicioPartialView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -8,7 +8,7 @@ class SergusEducationSection extends StatelessWidget {
         SizedBox(height: 15),
         Center(
           child: Text(
-            'SERGUS EDUCAÇÃO',
+            'BEM VINDO',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
@@ -29,4 +29,6 @@ class SergusEducationSection extends StatelessWidget {
   }
 }
 
-final String text = "Em construção\n\n";
+final String text = "Aqui você poderá ver suas informações previdenciárias, "
+    "como também aprender sobre o Novo Plano CD e fazer sua Pré-Adesão, Educação"
+    " Previdenciária e Financeira.";

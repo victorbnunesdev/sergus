@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sergusapp/app/views/about_view.dart';
+import 'package:sergusapp/app/views/sobre/sobre_view.dart';
 import 'package:sergusapp/constants.dart';
 
-class AboutButtons extends StatelessWidget {
+class SobreBotoesPartialView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,7 +27,8 @@ Widget ultimasNoticias(BuildContext context) {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => AboutView(section: Section.latest_news),
+            builder: (context) => SobreView(
+                sobrePartialViews: SobrePartialViews.ultimas_noticias),
           ),
         );
       },
@@ -46,7 +47,8 @@ Widget sergusEducacao(BuildContext context) {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => AboutView(section: Section.sergus_education),
+            builder: (context) =>
+                SobreView(sobrePartialViews: SobrePartialViews.sergus_educacao),
           ),
         );
       },
@@ -65,7 +67,8 @@ Widget politicaDePrivacidade(BuildContext context) {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => AboutView(section: Section.privacy_policy),
+            builder: (context) => SobreView(
+                sobrePartialViews: SobrePartialViews.politica_de_privacidade),
           ),
         );
       },

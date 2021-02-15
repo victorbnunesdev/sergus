@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LatestNewsSection extends StatelessWidget {
+class UltimasNoticiasPartialView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

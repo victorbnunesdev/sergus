@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sergusapp/app/views/sobre_view.dart';
+import 'package:sergusapp/app/views/sobre/sobre_view.dart';
 import 'package:sergusapp/app/views/welcome_view.dart';
 import 'package:sergusapp/constants.dart';
 
 import 'controllers/app_controller.dart';
 import 'home_page.dart';
-import 'views/about_view.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -23,8 +22,8 @@ class AppWidget extends StatelessWidget {
             routes: {
               '/': (context) => WelcomeView(),
               '/home': (context) => HomePage(),
-              '/sobre': (context) => SobreView(),
-              '/about': (context) => AboutView(section: Section.init),
+              '/sobre': (context) =>
+                  SobreView(sobrePartialViews: SobrePartialViews.inicio),
             },
           );
         });
