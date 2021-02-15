@@ -19,9 +19,6 @@ class RoundedButton extends StatelessWidget {
     return Container(
         child: Center(
       child: TextButton(
-        // minWidth: size.width * 0.7,
-        // height: size.height * 0.1,
-        // color: kPrimaryColor,
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(kPrimaryColor),
           minimumSize: MaterialStateProperty.all(

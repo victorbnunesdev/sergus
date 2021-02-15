@@ -7,25 +7,22 @@ import '../default_button.dart';
 class BodyMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          RoundedButton(
-            text: "Entrar",
-            press: () {
-              AppController.instance.changeTheme();
-            },
-          ),
-          EmptyButton(
-            text: "Quero conhecer a Sergus",
-            press: () {
-              Navigator.of(context).pushReplacementNamed('/about');
-            },
-          ),
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        RoundedButton(
+          text: "Acessar minha conta",
+          press: () {
+            AppController.instance.changeTheme();
+          },
+        ),
+        EmptyButton(
+          text: "Quero ser Sergus",
+          press: () {
+            Navigator.of(context).pushReplacementNamed('/about');
+          },
+        ),
+      ],
     );
   }
 }

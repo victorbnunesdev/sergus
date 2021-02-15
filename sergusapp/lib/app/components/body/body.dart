@@ -12,33 +12,34 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  bool isLoginPage;
-
   @override
   Widget build(BuildContext context) {
-    setState(() {
-      isLoginPage = false;
-    });
-
-    return Column(
-      children: [
-        Expanded(
-          flex: 6,
-          child: BodyTop(),
-        ),
-        Expanded(
-            flex: 2,
-            child: AnimatedContainer(
-              duration: Duration(seconds: 40),
-              curve: Curves.easeInToLinear,
-              child:
-                  AppController.instance.isDarkTheme ? LoginView() : BodyMain(),
-            )),
-        Expanded(
-          flex: 1,
-          child: BodyBottom(),
-        ),
-      ],
-    );
+    return SingleChildScrollView(
+        child: SizedBox(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: Column(
+        children: [
+          Expanded(
+            flex: 6,
+            child: BodyTop(),
+          ),
+          Expanded(
+              flex: 3,
+              child: AnimatedContainer(
+                  duration: Duration(seconds: 40),
+                  curve: Curves.easeInToLinear,
+                  child: Container(
+                    child: AppController.instance.isLoginView
+                        ? LoginView()
+                        : BodyMain(),
+                  ))),
+          Expanded(
+            flex: 1,
+            child: BodyBottom(),
+          ),
+        ],
+      ),
+    ));
   }
 }

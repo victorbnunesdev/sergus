@@ -3,15 +3,25 @@ import 'package:flutter/material.dart';
 class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TextField(
+    return Column(children: [
+      TextField(
         decoration: InputDecoration(
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(
-                color: Colors.purple, width: 20, style: BorderStyle.solid),
-          ),
-        ),
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.purple, width: 10, style: BorderStyle.solid),
+            ),
+            icon: Icon(Icons.person),
+            labelText: "Matrícula"),
       ),
-    );
+      TextField(
+        decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Colors.purple, width: 10, style: BorderStyle.solid),
+            ),
+            icon: Icon(Icons.lock),
+            labelText: "Senha"),
+      ),
+    ]);
   }
 }

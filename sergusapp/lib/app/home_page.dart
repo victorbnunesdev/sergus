@@ -35,7 +35,7 @@ class CustomSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Switch(
-      value: AppController.instance.isDarkTheme,
+      value: AppController.instance.isLoginView,
       onChanged: (value) {
         AppController.instance.changeTheme();
       },
