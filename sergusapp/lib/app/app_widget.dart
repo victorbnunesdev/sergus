@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:sergusapp/app/views/minha_conta_view.dart';
 import 'package:sergusapp/app/views/sobre/sobre_view.dart';
-import 'package:sergusapp/app/views/welcome_view.dart';
+import 'package:sergusapp/app/views/welcome/welcome_view.dart';
 import 'package:sergusapp/constants.dart';
 
 import 'controllers/app_controller.dart';
-import 'home_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -13,18 +13,17 @@ class AppWidget extends StatelessWidget {
         animation: AppController.instance,
         builder: (context, child) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-                primaryColor: kPrimaryColor,
-                scaffoldBackgroundColor: Colors.white,
-                brightness: Brightness.light),
-            initialRoute: '/',
-            routes: {
-              '/': (context) => WelcomeView(),
-              '/home': (context) => HomePage(),
-              '/sobre': (context) => SobreView(),
-            },
-          );
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                  primaryColor: kPrimaryColor,
+                  scaffoldBackgroundColor: Colors.white,
+                  brightness: Brightness.light),
+              initialRoute: '/',
+              routes: {
+                '/': (context) => WelcomeView(),
+                '/minhaconta': (context) => MinhaContaView(),
+                '/sobre': (context) => SobreView(),
+              });
         });
   }
 }

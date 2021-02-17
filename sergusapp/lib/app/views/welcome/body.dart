@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sergusapp/app/components/body/body_top.dart';
-import 'package:sergusapp/app/controllers/app_controller.dart';
-import 'package:sergusapp/app/views/login_view.dart';
 
 import 'body_bottom.dart';
 import 'body_main.dart';
+import 'body_top.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -25,15 +23,9 @@ class _BodyState extends State<Body> {
             child: BodyTop(),
           ),
           Expanded(
-              flex: 3,
-              child: AnimatedContainer(
-                  duration: Duration(seconds: 40),
-                  curve: Curves.easeInToLinear,
-                  child: Container(
-                    child: AppController.instance.isLoginView
-                        ? LoginView()
-                        : BodyMain(),
-                  ))),
+            flex: 4,
+            child: BodyMain(),
+          ),
           Expanded(
             flex: 1,
             child: BodyBottom(),
