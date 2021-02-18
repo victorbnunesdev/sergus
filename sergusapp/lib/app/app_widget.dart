@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sergusapp/app/views/conheca_sergus_view.dart';
 import 'package:sergusapp/app/views/minha_conta_view.dart';
-import 'package:sergusapp/app/views/sobre/sobre_view.dart';
 import 'package:sergusapp/app/views/welcome/welcome_view.dart';
 import 'package:sergusapp/constants.dart';
 
@@ -22,7 +22,7 @@ class AppWidget extends StatelessWidget {
               routes: {
                 '/': (context) => WelcomeView(),
                 '/minhaconta': (context) => MinhaContaView(),
-                '/sobre': (context) => SobreView(),
+                '/conhecasergus': (context) => ConhecaSergusView(),
               });
         });
   }
