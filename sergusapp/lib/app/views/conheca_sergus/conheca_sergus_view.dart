@@ -19,7 +19,7 @@ class ConhecaSergusView extends StatelessWidget {
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
           ),
-          _carregarSessaoConhecaSergus(),
+          _carregarSessaoConhecaSergus(context),
           SizedBox(
             height: 40,
           ),
@@ -29,14 +29,14 @@ class ConhecaSergusView extends StatelessWidget {
             style: TextStyle(
                 color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
           ),
-          _carregarSessaoInformacoesServicos(),
+          _carregarSessaoInformacoesServicos(context),
         ]),
       ),
     );
   }
 }
 
-_carregarSessaoConhecaSergus() {
+_carregarSessaoConhecaSergus(BuildContext context) {
   return Column(
     children: [
       Row(
@@ -101,7 +101,9 @@ _carregarSessaoConhecaSergus() {
               height: 120,
               child: FlatButton(
                 color: kSecondColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/serguseducacao');
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -132,7 +134,9 @@ _carregarSessaoConhecaSergus() {
               height: 120,
               child: FlatButton(
                 color: kSecondColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/politicaprivacidade');
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -192,7 +196,7 @@ _carregarSessaoConhecaSergus() {
   );
 }
 
-_carregarSessaoInformacoesServicos() {
+_carregarSessaoInformacoesServicos(BuildContext context) {
   return Column(
     children: [
       Row(
@@ -288,7 +292,9 @@ _carregarSessaoInformacoesServicos() {
               height: 120,
               child: FlatButton(
                 color: kSecondColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/ultimasnoticias');
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

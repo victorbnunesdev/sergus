@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
 
-class PoliticaPrivacidadePartialView extends StatelessWidget {
+class PoliticaPrivacidadeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 15),
-        Center(
-          child: Text(
-            'POLÍTICA DE PRIVACIDADE',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          SizedBox(height: 15),
+          Center(
+            child: Text(
+              'POLÍTICA DE PRIVACIDADE',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
           ),
-        ),
-        Divider(
-          thickness: 2,
-        ),
-        SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            text,
-            textAlign: TextAlign.justify,
-            style: TextStyle(fontSize: 15),
+          Divider(
+            thickness: 2,
           ),
-        ),
-      ],
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              text,
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontSize: 15),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

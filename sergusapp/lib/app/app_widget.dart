@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sergusapp/app/views/conheca_sergus_view.dart';
+import 'package:sergusapp/app/views/conheca_sergus/conheca_sergus_view.dart';
+import 'package:sergusapp/app/views/conheca_sergus/politica_privacidade_view.dart';
+import 'package:sergusapp/app/views/conheca_sergus/sergus_educacao_view.dart';
+import 'package:sergusapp/app/views/conheca_sergus/ultimas_noticias_view.dart';
 import 'package:sergusapp/app/views/minha_conta_view.dart';
 import 'package:sergusapp/app/views/welcome/welcome_view.dart';
 import 'package:sergusapp/constants.dart';
@@ -23,6 +26,9 @@ class AppWidget extends StatelessWidget {
                 '/': (context) => WelcomeView(),
                 '/minhaconta': (context) => MinhaContaView(),
                 '/conhecasergus': (context) => ConhecaSergusView(),
+                '/politicaprivacidade': (context) => PoliticaPrivacidadeView(),
+                '/serguseducacao': (context) => SergusEducacaoView(),
+                '/ultimasnoticias': (context) => UltimasNoticiasView(),
               });
         });
   }

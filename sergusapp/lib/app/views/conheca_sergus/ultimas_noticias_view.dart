@@ -1,28 +1,32 @@
 import 'package:flutter/material.dart';
 
-class UltimasNoticiasPartialView extends StatelessWidget {
+class UltimasNoticiasView extends StatelessWidget {
   final controller;
 
-  const UltimasNoticiasPartialView({Key key, this.controller})
-      : super(key: key);
+  const UltimasNoticiasView({Key key, this.controller}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 15),
-        Center(
-          child: Text(
-            'ÚLTIMAS NOTÍCIAS',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 15),
+            Center(
+              child: Text(
+                'ÚLTIMAS NOTÍCIAS',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+            ),
+            Divider(
+              thickness: 2,
+            ),
+            SizedBox(height: 10),
+            carregarNoticias(),
+          ],
         ),
-        Divider(
-          thickness: 2,
-        ),
-        SizedBox(height: 10),
-        carregarNoticias(),
-      ],
+      ),
     );
   }
 }
