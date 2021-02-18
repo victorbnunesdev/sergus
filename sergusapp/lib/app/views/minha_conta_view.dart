@@ -60,11 +60,29 @@ class MinhaContaView extends StatelessWidget {
                     return Container(
                       child: Column(
                         children: [
-                          Container(
-                            width: 100,
+                          FlatButton(
+                            minWidth: 100,
                             height: 100,
-                            color: Colors.yellow,
-                          )
+                            color: kSecondColor,
+                            onPressed: () {},
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.present_to_all,
+                                  color: kPrimaryColor,
+                                ),
+                                Text(
+                                  'Apresentação',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      color: kPrimaryColor,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 13),
+                                ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     );
