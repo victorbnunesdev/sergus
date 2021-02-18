@@ -25,43 +25,71 @@ class MinhaContaView extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Container(
-                  color: Colors.purple,
-                  child: Row(children: [
+                padding: EdgeInsets.all(20),
+                child: Row(
+                  children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Patrimônio"),
-                        Text("R\$ 12.950,10"),
+                        Text(
+                          "Patrimônio",
+                          style: TextStyle(
+                            fontSize: 22,
+                          ),
+                        ),
+                        Text(
+                          "R\$ 12.950,10",
+                          style: TextStyle(fontSize: 28, color: kPrimaryColor),
+                        ),
                       ],
                     )
-                  ])),
+                  ],
+                ),
+              ),
             ),
             Expanded(
               flex: 2,
-              child: PageView.builder(
-                controller: PageController(viewportFraction: 0.3),
-                scrollDirection: Axis.horizontal,
-                itemCount: servicos.length,
-                onPageChanged: (int index) {},
-                itemBuilder: (BuildContext context, int index) {
-                  Servico servico = servicos[index];
-                  return Container(
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 100,
-                          color: Colors.yellow,
-                        )
-                      ],
-                    ),
-                  );
-                },
+              child: Container(
+                child: PageView.builder(
+                  controller: PageController(viewportFraction: 0.3),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: servicos.length,
+                  onPageChanged: (int index) {},
+                  itemBuilder: (BuildContext context, int index) {
+                    Servico servico = servicos[index];
+                    return Container(
+                      child: Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.yellow,
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
               ),
+            ),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Comunicados",
+                    style: TextStyle(
+                      fontSize: 22,
+                    ),
+                  ),
+                ],
+              ),
+              padding: EdgeInsets.all(20),
             ),
             Expanded(
               flex: 3,
               child: PageView.builder(
-                controller: PageController(viewportFraction: 0.5),
+                controller: PageController(viewportFraction: 0.7),
                 scrollDirection: Axis.horizontal,
                 itemCount: servicos.length,
                 onPageChanged: (int index) {},
@@ -71,42 +99,49 @@ class MinhaContaView extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          width: 180,
-                          height: 100,
-                          color: Colors.pinkAccent,
-                        )
+                            width: 240,
+                            height: 120,
+                            color: Colors.green[100],
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Image.network(
+                                        "https://play-lh.googleusercontent.com/pUediKLjbs53FessiUvxMYbejQHpR60yECcBaxy9Wk_SCZWz8Bn2bRP91yYMOWUU2UY=s180-rw")),
+                                Expanded(
+                                  flex: 4,
+                                  child: Container(
+                                    padding: EdgeInsets.only(top: 20, left: 20),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Nº 001/2021",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          "Ref.: Plano CD - Alteração da taxa de Contribuição",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          "Plano CD - Alteração da taxa de Contribuição",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ))
                       ],
                     ),
                   );
                 },
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                  color: Colors.purple,
-                  child: Row(children: [
-                    Column(
-                      children: [
-                        Text("Central de Atendimento"),
-                        Text("(79) 2106-4500"),
-                      ],
-                    )
-                  ])),
-            ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                  color: Colors.purple,
-                  child: Row(children: [
-                    Column(
-                      children: [
-                        Text("Endereço"),
-                        Text(
-                            "Av. Augusto Maynard, 321, 1º andar - São José 49015-380 - Aracaju-SE"),
-                      ],
-                    )
-                  ])),
             ),
           ],
         )),
