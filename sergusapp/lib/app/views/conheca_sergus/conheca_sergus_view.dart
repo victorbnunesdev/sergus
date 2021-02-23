@@ -47,7 +47,9 @@ _carregarSessaoConhecaSergus(BuildContext context) {
               height: 120,
               child: FlatButton(
                 color: kSecondColor,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/apresentacao');
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
